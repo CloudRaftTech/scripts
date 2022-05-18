@@ -6,7 +6,7 @@ After=network.target remote-fs.target nss-lookup.target
 Type=simple
 ExecStart=/usr/bin/caddy start -config /etc/caddy/Caddyfile
 ExecStop=kill -9 $(pidof caddy)
-ExecReload=kill -9 $(pidof caddy) && /usr/bin/caddycaddy start -config /etc/caddy/Caddyfile
+ExecReload=kill -9 $(pidof caddy) && /usr/bin/caddy start -config /etc/caddy/Caddyfile
 
 [Install]
 WantedBy=multi-user.target
